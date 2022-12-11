@@ -12,18 +12,14 @@ local win = BlekLib:Create({
     }
 })
 local maintab = win:Tab('Auto Farm')
-local charactertab = win:Tab('Auto Buy Egg')
 local teleport = win:Tab("Teleport")
 local main = win:Tab("Character")
 local uitab = win:Tab('UI')
 
+uitab = win:Label("Created By zHacks")
 main:Slider("WalkSpeed", 15 , 0 , 500, function (v)
    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = v
 end)
-main:Slider("JumpPower", 15 , 0 , 500, function (s)
-   game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
-end)
-
 maintab:Toggle('Auto Click', function(tap)
   getgenv().autotap = tap
     print("Auto Tap is : ", Tap)
@@ -38,7 +34,6 @@ maintab:Toggle("Auto Equip Best Pet", function(auto)
         autoequipbestpet()
     end
 end)
-maintab:Button("Created By zHacks")
 
 
 teleport:Label("To Use This Teleport You Need To Unlock The Area First")
