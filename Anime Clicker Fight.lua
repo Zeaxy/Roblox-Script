@@ -16,10 +16,11 @@ local teleport = win:Tab("Teleport")
 local main = win:Tab("Character")
 local uitab = win:Tab('UI')
 
-uitab = win:Label("Created By zHacks")
+
 main:Slider("WalkSpeed", 15 , 0 , 500, function (v)
    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = v
 end)
+
 maintab:Toggle('Auto Click', function(tap)
   getgenv().autotap = tap
     print("Auto Tap is : ", Tap)
@@ -34,9 +35,8 @@ maintab:Toggle("Auto Equip Best Pet", function(auto)
         autoequipbestpet()
     end
 end)
-
-
 teleport:Label("To Use This Teleport You Need To Unlock The Area First")
+uitab:Label("Created by zHacks")
 
 teleport:Button("World 1", function()
     world1()
@@ -108,4 +108,3 @@ end
 function world7()    
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-134.520615, 25.0000076, 1692.99988, 1, 0, 0, 0, 1, 0, 0, 0, 1)
 end
-
