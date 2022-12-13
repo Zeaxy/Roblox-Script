@@ -1,5 +1,5 @@
 local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/GreenDeno/Venyx-UI-Library/main/source.lua"))()
-local venyx = library.new("Venyx", 5013109572)
+local venyx = library.new("Flying Race Clicker by zHacks", 5013109572)
 getgenv().autofarm = false
 getgenv().rebirt = false
 
